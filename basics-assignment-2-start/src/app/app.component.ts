@@ -6,4 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  username = '';
+  allowClick = false;
+
+  isNotBlank() {
+    if (this.username){
+      this.allowClick = true;
+    }
+  }
+  clearUsername(){
+    this.username = '';
+  }
 }
