@@ -8,13 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   username = '';
-  allowClick = false;
 
-  isNotBlank() {
-    if (this.username){
-      this.allowClick = true;
-    }
-  }
   clearUsername(){
     this.username = '';
   }
