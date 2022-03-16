@@ -12,6 +12,7 @@ export class AppComponent {
 
   onToggleDisplay() {
     this.paragraphShown = !this.paragraphShown;
-    this.buttonClicks.push(this.buttonClicks.length + 1);
+    // this.buttonClicks.push(this.buttonClicks.length + 1);
+    this.buttonClicks.push(new Date)
   }
 }
