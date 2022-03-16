@@ -6,4 +6,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
+
+  paragraphShown = false;
+  buttonClicks = [];
+
+  onToggleDisplay() {
+    this.paragraphShown = !this.paragraphShown;
+    this.buttonClicks.push(this.buttonClicks.length + 1);
+  }
 }

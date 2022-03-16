@@ -8,6 +8,19 @@
         <li>Log all button clicks in an array and output that array below the secret paragraph (maybe log a timestamp or simply an incrementing number)</li>
         <li>Starting at the 5th log item, give all future log items a blue background (via ngStyle) and white color (ngClass)</li>
       </ol>
+      <hr>
+      <!-- <button
+      class="btn btn-primary"
+      (click)="paragraphShown = !paragraphShown">Display Details</button> -->
+      <button
+        class="btn btn-primary" (click)="onToggleDisplay()">Toggle Details</button>
+      <p *ngIf="paragraphShown">Secret Password = Tuna</p>
+      <hr>
+      <!-- I feel rediculous. I got everything right on this but I forgot that after you loop through, you actually
+        have to output something, ie. include it in between the div open and close. -->
+      <div *ngFor="let click of buttonClicks"
+      [ngStyle]="{backgroundColor: click >= 5 ? 'blue' : 'transparent'}"
+      [ngClass]="{'white-text': click >= 5}">{{ click }}</div>
     </div>
   </div>
 </div>
